@@ -23,7 +23,7 @@
 body {
 background: var(–paper);
 color: var(–ink);
-font-family: ‘Libre Baskerville’, Georgia, serif;
+font-family: 'Libre Baskerville', Georgia, serif;
 font-size: 18px;
 line-height: 1.8;
 }
@@ -37,7 +37,7 @@ position: relative;
 }
 
 .pub-name {
-font-family: ‘DM Mono’, monospace;
+font-family: 'DM Mono', monospace;
 font-size: 0.75rem;
 letter-spacing: 0.25em;
 text-transform: uppercase;
@@ -46,7 +46,7 @@ margin-bottom: 0.5rem;
 }
 
 .dateline {
-font-family: ‘DM Sans’, sans-serif;
+font-family: 'DM Sans', sans-serif;
 font-size: 0.8rem;
 color: var(–muted);
 letter-spacing: 0.1em;
@@ -73,7 +73,7 @@ border-bottom: 1px solid var(–rule);
 }
 
 .kicker {
-font-family: ‘DM Mono’, monospace;
+font-family: 'DM Mono', monospace;
 font-size: 0.7rem;
 letter-spacing: 0.3em;
 text-transform: uppercase;
@@ -82,7 +82,7 @@ margin-bottom: 1.5rem;
 }
 
 h1 {
-font-family: ‘Libre Baskerville’, serif;
+font-family: 'Libre Baskerville', serif;
 font-size: clamp(2rem, 5vw, 3.4rem);
 line-height: 1.15;
 font-weight: 700;
@@ -91,7 +91,7 @@ letter-spacing: -0.02em;
 }
 
 .dek {
-font-family: ‘DM Sans’, sans-serif;
+font-family: 'DM Sans', sans-serif;
 font-size: 1.1rem;
 line-height: 1.6;
 color: #3a3530;
@@ -101,7 +101,7 @@ max-width: 600px;
 
 .byline {
 margin-top: 2rem;
-font-family: ‘DM Sans’, sans-serif;
+font-family: 'DM Sans', sans-serif;
 font-size: 0.85rem;
 color: var(–muted);
 display: flex;
@@ -120,7 +120,7 @@ margin: 3.5rem 0 2rem;
 }
 
 .section-number {
-font-family: ‘DM Mono’, monospace;
+font-family: 'DM Mono', monospace;
 font-size: 0.65rem;
 letter-spacing: 0.2em;
 color: var(–warm);
@@ -139,7 +139,7 @@ padding: 3rem 0;
 }
 
 h2 {
-font-family: ‘Libre Baskerville’, serif;
+font-family: 'Libre Baskerville', serif;
 font-size: 1.5rem;
 font-weight: 700;
 margin: 3rem 0 1rem;
@@ -147,7 +147,7 @@ line-height: 1.3;
 }
 
 h3 {
-font-family: ‘DM Sans’, sans-serif;
+font-family: 'DM Sans', sans-serif;
 font-size: 0.8rem;
 font-weight: 500;
 letter-spacing: 0.2em;
@@ -176,7 +176,7 @@ display: block;
 margin-top: 0.75rem;
 font-size: 0.75rem;
 font-style: normal;
-font-family: ‘DM Mono’, monospace;
+font-family: 'DM Mono', monospace;
 letter-spacing: 0.1em;
 color: var(–muted);
 }
@@ -207,7 +207,7 @@ background: rgba(74,101,128,0.04);
 }
 
 .framework-box h4 {
-font-family: ‘DM Mono’, monospace;
+font-family: 'DM Mono', monospace;
 font-size: 0.7rem;
 letter-spacing: 0.2em;
 text-transform: uppercase;
@@ -216,7 +216,7 @@ margin-bottom: 1rem;
 }
 
 .framework-box p {
-font-family: ‘DM Sans’, sans-serif;
+font-family: 'DM Sans', sans-serif;
 font-size: 0.95rem;
 line-height: 1.7;
 margin-bottom: 0.75rem;
@@ -230,7 +230,7 @@ color: #2a2520;
 border-left: 2px solid var(–rust);
 padding-left: 1.25rem;
 margin: 2rem 0;
-font-family: ‘DM Sans’, sans-serif;
+font-family: 'DM Sans', sans-serif;
 font-size: 0.9rem;
 line-height: 1.65;
 color: #3a3530;
@@ -240,6 +240,49 @@ color: #3a3530;
 em { font-style: italic; }
 strong { font-weight: 700; }
 
+/* Citations */
+.citation {
+color: var(–cool);
+text-decoration: none;
+font-size: 0.75em;
+vertical-align: super;
+line-height: 0;
+}
+.citation:hover { text-decoration: underline; }
+
+/* References section */
+.references {
+padding: 3rem 0;
+border-top: 1px solid var(–rule);
+margin-top: 2rem;
+}
+
+.references h2 {
+font-size: 1.2rem;
+margin: 0 0 1.5rem;
+}
+
+.references ol {
+font-family: 'DM Sans', sans-serif;
+font-size: 0.875rem;
+line-height: 1.8;
+padding-left: 1.5rem;
+color: #3a3530;
+}
+
+.references li {
+margin-bottom: 0.75rem;
+}
+
+.references a {
+color: var(–cool);
+text-decoration: none;
+border-bottom: 1px solid var(–cool);
+word-break: break-all;
+}
+
+.references a:hover { opacity: 0.75; }
+
 /* Closing */
 .closing {
 border-top: 2px solid var(–ink);
@@ -248,7 +291,7 @@ margin-top: 4rem;
 }
 
 .closing-note {
-font-family: ‘DM Sans’, sans-serif;
+font-family: 'DM Sans', sans-serif;
 font-size: 0.85rem;
 color: var(–muted);
 line-height: 1.7;
@@ -298,9 +341,9 @@ body { font-size: 16px; }
 
   <h2>Start With What They Got Right</h2>
 
-  <p>In May 2026, Thinking Machines Lab released a research preview of what they call interaction models — AI systems designed not to wait for a human prompt but to engage in continuous, real-time exchange across audio, video, and text. The model processes input and output in 200-millisecond chunks. It can interrupt, react to silence, track elapsed time, and respond to visual cues without being explicitly told to. It is, in the narrow technical sense, impressive.</p>
+  <p>In May 2026, Thinking Machines Lab released a research preview of what they call <strong>interaction models</strong> — AI systems designed not to wait for a human prompt but to engage in continuous, real-time exchange across audio, video, and text.<sup><a href="#ref-1" class="citation">[1]</a></sup> The model processes input and output in <strong>200-millisecond chunks</strong>. It can interrupt, react to silence, track elapsed time, and respond to visual cues without being explicitly told to. It is, in the narrow technical sense, impressive.</p>
 
-  <p>Their core critique of the current AI paradigm is also correct: today's systems push humans out of the loop. The turn-based interface — human types, model waits, model responds, human waits — is a design bottleneck that limits how much of a person's judgment, context, and intent can actually reach the system. Thinking Machines wants to change that. They want AI that works with people the way people work with each other.</p>
+  <p>Their core critique of the current AI paradigm is also correct: today's systems push humans out of the loop. The <strong>turn-based interface</strong> — human types, model waits, model responds, human waits — is a design bottleneck that limits how much of a person's judgment, context, and intent can actually reach the system. Thinking Machines wants to change that. They want AI that works with people the way people work with each other.</p>
 
   <p>That is a genuinely good ambition. The question is whether the architecture, the framing, and the competitive market it is being released into will actually deliver it — or whether the warm aspiration will be captured by something colder.</p>
 
@@ -313,16 +356,16 @@ body { font-size: 16px; }
 
   <h2>How Power Builds Containers for Abuse</h2>
 
-  <p>History does not repeat, but it does rhyme in its structures. The enclosure movement in England between the 13th and 19th centuries offers a pattern that deserves serious attention here. For centuries, rural communities maintained common land — shared pastures, forests, and waterways that anyone could use to graze animals, gather food, and sustain a household. The enclosures privatized that land, piece by piece, under legal frameworks that looked perfectly reasonable in their own terms. The result was ecological disconnection, social stratification, and the funneling of human labor into wage-dependent industrial systems.</p>
+  <p>History does not repeat, but it does rhyme in its structures. The <strong>enclosure movement</strong> in England between the 13th and 19th centuries offers a pattern that deserves serious attention here.<sup><a href="#ref-2" class="citation">[2]</a></sup> For centuries, rural communities maintained <strong>common land</strong> — shared pastures, forests, and waterways that anyone could use to graze animals, gather food, and sustain a household. The enclosures privatized that land, piece by piece, under legal frameworks that looked perfectly reasonable in their own terms. The result was ecological disconnection, social stratification, and the funneling of human labor into wage-dependent industrial systems.</p>
 
-  <p>The philosopher Ivan Illich, writing in <em>Tools for Conviviality</em> in 1973, identified this as a template. He called it the creation of a <em>radical monopoly</em>: when a tool or institution grows so large and so embedded that it eliminates the conditions under which alternatives could exist. The car created a radical monopoly on movement — not by forcing people into cars, but by redesigning cities so that not having a car became practically impossible. Compulsory schooling created a radical monopoly on learning — not by banning other forms of education, but by making the credential the prerequisite for everything else.</p>
+  <p>The philosopher Ivan Illich, writing in <em>Tools for Conviviality</em> in 1973, identified this as a template.<sup><a href="#ref-3" class="citation">[3]</a></sup> He called it the creation of a <strong>radical monopoly</strong>: when a tool or institution grows so large and so embedded that it eliminates the conditions under which alternatives could exist. The car created a radical monopoly on movement — not by forcing people into cars, but by redesigning cities so that not having a car became practically impossible. Compulsory schooling created a radical monopoly on learning — not by banning other forms of education, but by making the credential the prerequisite for everything else.</p>
 
   <blockquote>
     Convivial tools are those which give each person who uses them the greatest opportunity to enrich the environment with the fruits of his or her vision. Industrial tools deny this possibility.
-    <cite>— Ivan Illich, Tools for Conviviality (1973)</cite>
+    <cite>— Ivan Illich, <em>Tools for Conviviality</em> (1973)<sup><a href="#ref-3" class="citation">[3]</a></sup></cite>
   </blockquote>
 
-  <p>The question Illich forces us to ask of any technology is: does this tool extend human agency, or does it create a monopoly over a domain of human life that gradually makes unmediated human action feel inadequate, inefficient, or obsolete?</p>
+  <p>The question Illich forces us to ask of any technology is: does this tool extend <strong>human agency</strong>, or does it create a monopoly over a domain of human life that gradually makes unmediated human action feel inadequate, inefficient, or obsolete?</p>
 
   <p>AI is in the process of answering that question right now. And the answer is not predetermined. It depends entirely on choices being made in labs, in funding rounds, in procurement decisions, and in policy rooms — most of which are happening without meaningful public deliberation.</p>
 
@@ -335,13 +378,13 @@ body { font-size: 16px; }
 
   <p>Thinking Machines labels the Y-axis of their benchmark chart <em>Intelligence.</em> It is a small typographic choice with a long, violent history.</p>
 
-  <p>When Alfred Binet created the first intelligence test in 1904, he built a narrow tool for a narrow purpose: identifying children in French schools who needed extra support. He was explicit that his scale could not and should not be used as a general ranking of human worth. Within two decades, American psychologists had stripped that nuance entirely, redeploying the tool as a measure of fixed, heritable, native intelligence.</p>
+  <p>When Alfred Binet created the first <strong>intelligence test</strong> in 1904, he built a narrow tool for a narrow purpose: identifying children in French schools who needed extra support.<sup><a href="#ref-4" class="citation">[4]</a></sup> He was explicit that his scale could not and should not be used as a general ranking of human worth. Within two decades, American psychologists had stripped that nuance entirely, redeploying the tool as a measure of fixed, heritable, native intelligence.</p>
 
-  <p>The consequences were not abstract. Intelligence scores became the basis for immigration restriction in 1924, for forced sterilization laws — upheld by the US Supreme Court — that affected over 60,000 Americans by 1964, and for policies in Nazi Germany that authorized the murder of children on grounds of cognitive inferiority. The eugenicists did not think of themselves as monsters. They thought of themselves as scientists acting on data.</p>
+  <p>The consequences were not abstract. Intelligence scores became the basis for <strong>immigration restriction in 1924</strong>,<sup><a href="#ref-5" class="citation">[5]</a></sup> for <strong>forced sterilization</strong> laws — upheld by the US Supreme Court — that affected over 60,000 Americans by 1964,<sup><a href="#ref-6" class="citation">[6]</a></sup> and for policies in Nazi Germany that authorized the murder of children on grounds of cognitive inferiority. The eugenicists did not think of themselves as monsters. They thought of themselves as scientists acting on data.</p>
 
   <p>We are not saying Thinking Machines is engaged in eugenics thinking. We are saying: <em>the structural move is identical.</em> A single numerical score. A ranked comparison between systems. A label — <em>Intelligence</em> — that carries the full weight of human cognitive life. The intent is entirely different. The architecture is not.</p>
 
-  <p>Once that architecture is normalized across an industry, it does not stay in the lab. It migrates to hiring systems, to welfare eligibility decisions, to criminal sentencing tools, to educational sorting. We have already watched this happen with simpler AI systems. We are now watching it accelerate.</p>
+  <p>Once that architecture is normalized across an industry, it does not stay in the lab. It migrates to <strong>hiring systems</strong>, to <strong>welfare eligibility decisions</strong>, to <strong>criminal sentencing tools</strong>, to educational sorting. We have already watched this happen with simpler AI systems. We are now watching it accelerate.</p>
 
   <div class="section-marker">
     <span class="section-number">IV</span>
@@ -350,20 +393,20 @@ body { font-size: 16px; }
 
   <h2>Warm Data and What Gets Lost</h2>
 
-  <p>Nora Bateson, President of the International Bateson Institute, offers a framework that cuts directly to why this reduction is dangerous. She calls it Warm Data.</p>
+  <p>Nora Bateson, President of the International Bateson Institute, offers a framework that cuts directly to why this reduction is dangerous. She calls it <strong>Warm Data</strong>.<sup><a href="#ref-7" class="citation">[7]</a></sup></p>
 
   <blockquote>
     Warm Data is information that is alive. Warm Data itches when it is confined. It is the kind of information that lets you know when to tell someone you love them.
-    <cite>— Nora Bateson</cite>
+    <cite>— Nora Bateson<sup><a href="#ref-7" class="citation">[7]</a></sup></cite>
   </blockquote>
 
-  <p>Cold data — the kind that fills benchmark tables — captures a subject by removing it from context and freezing it in time. It is precise, comparable, and useful for narrow tasks. But living systems — organisms, families, communities, minds — cannot be understood from outside their relational context without losing the most important thing about them.</p>
+  <p><strong>Cold data</strong> — the kind that fills benchmark tables — captures a subject by removing it from context and freezing it in time. It is precise, comparable, and useful for narrow tasks. But living systems — organisms, families, communities, minds — cannot be understood from outside their <strong>relational context</strong> without losing the most important thing about them.</p>
 
   <p>Bateson is not anti-data. She is explicit that warm and cold data are not opposites: they could, she says, "be friends, be in tandem to each other." The problem is when cold data claims to have captured the whole — when a benchmark score is called <em>Intelligence</em> rather than what it is: a narrow measure of audio task performance in controlled conditions.</p>
 
   <p>The warm data of a conversation includes everything that a real-time AI model is explicitly designed to perceive but cannot actually experience: the grief behind a question, the social context shaping how someone is holding their body, the history between two people that makes a single word carry enormous weight. Thinking Machines' model can track time and interrupt at the right moment. It cannot know what the moment costs someone to be in.</p>
 
-  <p>This is not a technical limitation that will be solved by scaling. It is a categorical difference between living systems and static ones. And the danger is not that we fail to notice it — it is that in the competitive pressure to benchmark and rank and ship, we gradually stop treating it as relevant.</p>
+  <p>This is not a technical limitation that will be solved by scaling. It is a <strong>categorical difference</strong> between living systems and static ones. And the danger is not that we fail to notice it — it is that in the competitive pressure to benchmark and rank and ship, we gradually stop treating it as relevant.</p>
 
 </div>
 
@@ -382,21 +425,21 @@ body { font-size: 16px; }
 
   <h2>Capital, Commodification, and the Capture of Human Expression</h2>
 
-  <p>None of this is happening in a vacuum. It is happening inside a specific economic structure in which the development of AI is almost entirely funded by, governed by, and oriented toward the logic of capital accumulation.</p>
+  <p>None of this is happening in a vacuum. It is happening inside a specific economic structure in which the development of AI is almost entirely funded by, governed by, and oriented toward the logic of <strong>capital accumulation</strong>.</p>
 
-  <p>In 2024, nearly 90 percent of notable AI models came from industry, up from 60 percent in 2023. The research agenda — including what gets measured, what gets named, what gets optimized — is shaped by what attracts investment and competitive advantage. Thinking Machines is no exception. Their interaction model is a research preview with a commercial horizon. The benchmark chart that labels AI performance <em>Intelligence</em> is also, implicitly, a marketing document.</p>
+  <p>In 2024, nearly <strong>90 percent of notable AI models came from industry</strong>, up from 60 percent in 2023.<sup><a href="#ref-8" class="citation">[8]</a></sup> The research agenda — including what gets measured, what gets named, what gets optimized — is shaped by what attracts investment and competitive advantage. Thinking Machines is no exception. Their interaction model is a research preview with a commercial horizon. The benchmark chart that labels AI performance <em>Intelligence</em> is also, implicitly, a marketing document.</p>
 
-  <p>This is not a condemnation of the researchers involved, many of whom are genuinely motivated by the collaborative vision they describe. It is a structural observation: when human capabilities become the thing that AI is benchmarked against, those capabilities also become, in the logic of markets, the cost that AI is being hired to eliminate. Human judgment, human attention, human relationship — these are reframed as inefficiencies to be automated rather than values to be supported.</p>
+  <p>This is not a condemnation of the researchers involved, many of whom are genuinely motivated by the collaborative vision they describe. It is a structural observation: when human capabilities become the thing that AI is benchmarked against, those capabilities also become, in the logic of markets, the cost that AI is being hired to eliminate. <strong>Human judgment, human attention, human relationship</strong> — these are reframed as inefficiencies to be automated rather than values to be supported.</p>
 
-  <p>We can see this logic playing out in real time. An estimated 85 million jobs have been displaced globally by AI and automation through 2026. Goldman Sachs models project that approximately 300 million full-time jobs worldwide will be affected by generative AI. Young workers are disproportionately impacted — unemployment among 20-to-30-year-olds in tech-exposed occupations has risen by nearly 3 percentage points since early 2025 alone. We are currently in what researchers describe as the period of maximum disruption: the phase when jobs hollowed out by task automation now require full transition, and the gap between displaced roles and new ones is widest.</p>
+  <p>We can see this logic playing out in real time. An estimated <strong>85 million jobs have been displaced</strong> globally by AI and automation through 2026.<sup><a href="#ref-9" class="citation">[9]</a></sup> Goldman Sachs models project that approximately <strong>300 million full-time jobs</strong> worldwide will be affected by generative AI.<sup><a href="#ref-10" class="citation">[10]</a></sup> Young workers are disproportionately impacted — unemployment among 20-to-30-year-olds in tech-exposed occupations has risen by nearly <strong>3 percentage points</strong> since early 2025 alone.<sup><a href="#ref-9" class="citation">[9]</a></sup> We are currently in what researchers describe as the <strong>period of maximum disruption</strong>: the phase when jobs hollowed out by task automation now require full transition, and the gap between displaced roles and new ones is widest.</p>
 
-  <p>The World Economic Forum projects that 170 million new jobs will emerge by 2030 while 92 million disappear. The net is positive on paper. But the people who lose the jobs and the people who fill the new ones are rarely the same people. The critical variable — as researchers are careful to note — is the transition period: how long it takes, what support exists, and who bears the cost. The answer, historically, is: those with the least power bear the most cost and receive the least support.</p>
+  <p>The <strong>World Economic Forum</strong> projects that <strong>170 million new jobs</strong> will emerge by 2030 while <strong>92 million disappear</strong>.<sup><a href="#ref-11" class="citation">[11]</a></sup> The net is positive on paper. But the people who lose the jobs and the people who fill the new ones are rarely the same people. The critical variable — as researchers are careful to note — is the <strong>transition period</strong>: how long it takes, what support exists, and who bears the cost. The answer, historically, is: those with the least power bear the most cost and receive the least support.</p>
 
   <div class="aside">
-    The displacement effects of AI are not evenly distributed. High-wage, highly skilled roles increase while low-wage roles decrease, driving employment polarization and intensifying socioeconomic inequality — particularly in regions and industries with limited access to reskilling programs. This is not a prediction. It is the current, observed empirical record.
+    The displacement effects of AI are not evenly distributed. High-wage, highly skilled roles increase while low-wage roles decrease, driving <strong>employment polarization</strong> and intensifying socioeconomic inequality — particularly in regions and industries with limited access to reskilling programs. This is not a prediction. It is the current, observed empirical record.
   </div>
 
-  <p>Meanwhile, the companies building these systems are consolidating wealth, data, and decision-making power at a pace that has no historical precedent. We are witnessing, in Illich's terms, the construction of a radical monopoly over cognitive labor — not forced by law but created by a market logic in which AI tools gradually become so embedded in every institution that human performance without them begins to look inadequate by design.</p>
+  <p>Meanwhile, the companies building these systems are consolidating wealth, data, and decision-making power at a pace that has no historical precedent. We are witnessing, in Illich's terms, the construction of a <strong>radical monopoly over cognitive labor</strong> — not forced by law but created by a market logic in which AI tools gradually become so embedded in every institution that human performance without them begins to look inadequate by design.</p>
 
   <div class="section-marker">
     <span class="section-number">VI</span>
@@ -409,7 +452,7 @@ body { font-size: 16px; }
 
   <p>Consider who is not at the Thinking Machines benchmark review:</p>
 
-  <p>The care worker whose job involves maintaining warm, contextual, relational presence with elderly or disabled people — and whose role is being evaluated for AI substitution on the basis of task efficiency rather than relational quality. The community organizer in a rural or postindustrial region whose civic infrastructure — local government services, social programs, community institutions — is being progressively automated in the name of cost reduction. The child growing up in a system where teachers are being replaced by AI tutors ranked by instruction-following accuracy rather than their capacity to perceive the warm data of a child's development. The worker in the Global South whose creative and cognitive labor — art, writing, code, design — was scraped to train these models without consent or compensation, and whose market is now being supplied by the system trained on their work.</p>
+  <p>The <strong>care worker</strong> whose job involves maintaining warm, contextual, relational presence with elderly or disabled people — and whose role is being evaluated for AI substitution on the basis of task efficiency rather than relational quality. The <strong>community organizer</strong> in a rural or postindustrial region whose civic infrastructure — local government services, social programs, community institutions — is being progressively automated in the name of cost reduction. The <strong>child</strong> growing up in a system where teachers are being replaced by AI tutors ranked by instruction-following accuracy rather than their capacity to perceive the warm data of a child's development. The <strong>worker in the Global South</strong> whose creative and cognitive labor — art, writing, code, design — was scraped to train these models without consent or compensation, and whose market is now being supplied by the system trained on their work.</p>
 
   <p>These people are not edge cases. They are the majority of the world. And the benchmarks that determine which AI systems get built, scaled, and deployed are constructed with almost no reference to their lives, their contexts, or their needs.</p>
 
@@ -424,11 +467,11 @@ body { font-size: 16px; }
 
   <p>The risk is not only economic. It is constitutional in the deepest sense.</p>
 
-  <p>AI surveillance systems are already being used by authoritarian governments to monitor, target, and silence dissent. More than a third of humanity lives under autocratic rule. Chinese-developed "safe city" packages are being installed from Southeast Asia to Latin America. AI-based systems reduce structural checks on executive authority and concentrate power among fewer and fewer people. <em>Once entrenched, these systems are exceedingly difficult to dismantle.</em></p>
+  <p><strong>AI surveillance systems</strong> are already being used by authoritarian governments to monitor, target, and silence dissent. More than <strong>a third of humanity lives under autocratic rule</strong>.<sup><a href="#ref-12" class="citation">[12]</a></sup> Chinese-developed <strong>"safe city" packages</strong> are being installed from Southeast Asia to Latin America.<sup><a href="#ref-13" class="citation">[13]</a></sup> AI-based systems reduce structural checks on executive authority and concentrate power among fewer and fewer people. <em>Once entrenched, these systems are exceedingly difficult to dismantle.</em></p>
 
-  <p>But the democratic erosion is not only happening in authoritarian states. A 2024 survey found that 64 percent of US federal government employees reported using AI applications daily or several times a week — in areas including border patrol, biometric data collection, and drone manufacturing. The social media surveillance program "Catch and Revoke," launched in March 2025 by the State Department, used AI to review tens of thousands of student visa holders' social media. Whether you find that program reasonable or horrifying, it illustrates the dynamic: AI's promise of prediction and control creates institutional appetite for more of it, in domains that were previously governed by slower, messier, more accountable human processes.</p>
+  <p>But the democratic erosion is not only happening in authoritarian states. A 2024 survey found that <strong>64 percent of US federal government employees</strong> reported using AI applications daily or several times a week — in areas including border patrol, biometric data collection, and drone manufacturing.<sup><a href="#ref-14" class="citation">[14]</a></sup> The social media surveillance program <strong>"Catch and Revoke,"</strong> launched in March 2025 by the State Department, used AI to review tens of thousands of student visa holders' social media.<sup><a href="#ref-15" class="citation">[15]</a></sup> Whether you find that program reasonable or horrifying, it illustrates the dynamic: AI's promise of prediction and control creates institutional appetite for more of it, in domains that were previously governed by slower, messier, more accountable human processes.</p>
 
-  <p>Democracy depends on the kind of friction that AI is specifically designed to eliminate: the slowness that creates deliberation, the ambiguity that requires judgment, the relational texture that makes accountability possible. When we automate the friction, we automate away the conditions that make democratic governance function.</p>
+  <p>Democracy depends on the kind of <strong>friction</strong> that AI is specifically designed to eliminate: the slowness that creates deliberation, the ambiguity that requires judgment, the relational texture that makes accountability possible. When we automate the friction, we automate away the conditions that make democratic governance function.</p>
 
   <div class="section-marker">
     <span class="section-number">VIII</span>
@@ -441,20 +484,20 @@ body { font-size: 16px; }
 
   <p>Educators across disciplines are reporting a convergence of symptoms they have not encountered before. Students who use AI to draft their essays are producing work that is, by most surface measures, technically correct — well-structured, grammatically clean, competently hedged. And yet something is missing that is hard to name but impossible to ignore. The work does not sound like anyone. It sounds like everyone.</p>
 
-  <p>Research published in <em>Trends in Cognitive Sciences</em> in early 2026 found that large language models are systematically homogenizing human expression across three dimensions: language, perspective, and reasoning. Educators are watching this play out in real time. At Yale, a student reported that in an economics seminar that uses cold-calling, she could observe classmates pre-loading every document into a chatbot before class — not to cheat, but because the AI response felt more reliable than their own thinking.</p>
+  <p>Research published in <em>Trends in Cognitive Sciences</em> in early 2026 found that large language models are systematically <strong>homogenizing human expression</strong> across three dimensions: language, perspective, and reasoning.<sup><a href="#ref-16" class="citation">[16]</a></sup> Educators are watching this play out in real time. At Yale, a student reported that in an economics seminar that uses cold-calling, she could observe classmates pre-loading every document into a chatbot before class — not to cheat, but because the AI response felt more reliable than their own thinking.</p>
 
   <blockquote>
     Students face a dilemma: choosing between producing a text that "sounds better" thanks to AI, or one that "sounds like themselves." This tension can result in writing that dilutes the student's authentic voice — which is the essence of their identity in writing.
-    <cite>— Frontiers in Education, 2025 synthesis of AI writing research</cite>
+    <cite>— <em>Frontiers in Education</em>, 2025 synthesis of AI writing research<sup><a href="#ref-17" class="citation">[17]</a></sup></cite>
   </blockquote>
 
-  <p>The research on what is being lost is accumulating rapidly. Studies find that AI-supported students score better on fluency and elaboration in idea generation tasks — but also exhibit cognitive fixation and lower creative confidence, over-relying on AI suggestions as a ceiling rather than a floor. Researchers describe a pattern of cognitive offloading: the effortful work of forming a thought, finding words, tolerating the discomfort of not knowing — work that is, developmentally, precisely the point — is being bypassed. The shortcut feels like efficiency. It functions as atrophy.</p>
+  <p>The research on what is being lost is accumulating rapidly. Studies find that AI-supported students score better on fluency and elaboration in idea generation tasks — but also exhibit <strong>cognitive fixation</strong> and lower creative confidence, over-relying on AI suggestions as a ceiling rather than a floor. Researchers describe a pattern of <strong>cognitive offloading</strong>: the effortful work of forming a thought, finding words, tolerating the discomfort of not knowing — work that is, developmentally, precisely the point — is being bypassed. The shortcut feels like efficiency. It functions as atrophy.</p>
 
-  <p>For English language learners and second-language writers, the stakes are even more pointed. Writing in a second language is not merely a technical skill. It is an act of identity construction — of bringing a self, with its particular history and cultural inheritance, into relationship with a new linguistic world. Research on multilingual writers finds that without critical engagement with AI output, students risk homogenizing their writing and losing the individual markers of who they are. One student, recognising the problem, put it with remarkable clarity: <em>"Our voice is unique, even though there are some grammar mistakes or the flow doesn't run very smooth — but that is all better than the same structures from AI."</em></p>
+  <p>For English language learners and second-language writers, the stakes are even more pointed. Writing in a second language is not merely a technical skill. It is an act of <strong>identity construction</strong> — of bringing a self, with its particular history and cultural inheritance, into relationship with a new linguistic world. Research on multilingual writers finds that without critical engagement with AI output, students risk homogenizing their writing and losing the individual markers of who they are. One student, recognising the problem, put it with remarkable clarity: <em>"Our voice is unique, even though there are some grammar mistakes or the flow doesn't run very smooth — but that is all better than the same structures from AI."</em><sup><a href="#ref-17" class="citation">[17]</a></sup></p>
 
-  <p>A parallel body of research has identified what it calls <strong>cultural ghosting</strong> — the process by which AI writing assistants, responding to benign requests like "make this more professional," systematically remove culturally specific linguistic markers while preserving the semantic content. Nigerian English, Indian English, AAVE, Singaporean English — the features that carry social meaning, that locate a writer inside a community and a history — are treated as errors to be corrected toward a standard that is, invariably, a Western professional norm. The meaning survives. The person disappears. The user did not ask to be erased. They asked for help.</p>
+  <p>A parallel body of research has identified what it calls <strong>cultural ghosting</strong> — the process by which AI writing assistants, responding to benign requests like "make this more professional," systematically remove <strong>culturally specific linguistic markers</strong> while preserving the semantic content.<sup><a href="#ref-18" class="citation">[18]</a></sup> Nigerian English, Indian English, AAVE, Singaporean English — the features that carry social meaning, that locate a writer inside a community and a history — are treated as errors to be corrected toward a standard that is, invariably, a Western professional norm. The meaning survives. The person disappears. The user did not ask to be erased. They asked for help.</p>
 
-  <p>What the classroom is revealing is not primarily a crisis of academic integrity. It is a crisis of formation. Writing — especially creative and personal writing — is not a way of communicating what you already think. It is a primary mechanism by which thinking happens, by which a self is built, by which a person discovers what they believe and what they value. When that process is outsourced to a system trained on the aggregate of everyone else's expression, the loss is not just stylistic. It is ontological.</p>
+  <p>What the classroom is revealing is not primarily a crisis of academic integrity. It is a <strong>crisis of formation</strong>. Writing — especially creative and personal writing — is not a way of communicating what you already think. It is a primary mechanism by which thinking happens, by which a self is built, by which a person discovers what they believe and what they value. When that process is outsourced to a system trained on the aggregate of everyone else's expression, the loss is not just stylistic. It is ontological.</p>
 
   <div class="section-marker">
     <span class="section-number">IX</span>
@@ -463,15 +506,15 @@ body { font-size: 16px; }
 
   <h2>Change Is Never Local: Education as Ecosystem Signal</h2>
 
-  <p>Here is the move that systems thinking forces us to make: stop treating the classroom as a separate domain.</p>
+  <p>Here is the move that <strong>systems thinking</strong> forces us to make: stop treating the classroom as a separate domain.</p>
 
   <p>What is happening to writing in universities is also happening to creative work in the labour market. It is happening to the quality of political speech as elected officials use AI to generate communications at scale. It is happening to the texture of family life as parents use AI to draft letters, compose eulogies, write birthday messages. It is happening to religious communities where sermons are generated, to healthcare systems where clinical notes are auto-filled, to legal systems where arguments are templated.</p>
 
-  <p>Each of these looks, locally, like a reasonable efficiency gain. Collectively, they constitute a single systemic shift: the progressive replacement of human expression — in its particular, situated, culturally located form — with a statistical average of human expression trained on the past. The signal appears in education first because education is where the formation process is most explicit and most visible. But the formation that is being disrupted is not only educational. It is civic, relational, familial, spiritual, and political simultaneously.</p>
+  <p>Each of these looks, locally, like a reasonable efficiency gain. Collectively, they constitute a single systemic shift: the progressive replacement of <strong>human expression</strong> — in its particular, situated, culturally located form — with a statistical average of human expression trained on the past. The signal appears in education first because education is where the formation process is most explicit and most visible. But the formation that is being disrupted is not only educational. It is civic, relational, familial, spiritual, and political simultaneously.</p>
 
-  <p>This is exactly the pattern that Donella Meadows described in <em>Thinking in Systems</em> — and it carries the specific risk she identified as most dangerous: a system with an unchecked reinforcing loop that does not self-correct until it is too late, because the feedback signal — the loss of creative voice, relational texture, civic expressiveness — is diffuse, slow, and invisible against the clear short-term gains of fluency and speed.</p>
+  <p>This is exactly the pattern that Donella Meadows described in <em>Thinking in Systems</em> — and it carries the specific risk she identified as most dangerous: a system with an unchecked <strong>reinforcing loop</strong> that does not self-correct until it is too late, because the feedback signal — the loss of creative voice, relational texture, civic expressiveness — is diffuse, slow, and invisible against the clear short-term gains of fluency and speed.<sup><a href="#ref-19" class="citation">[19]</a></sup></p>
 
-  <p>Meadows wrote that any system that "gets so encrusted that it cannot self-evolve — that systematically scorns experimentation and wipes out the raw material of variability — cuts back resilience." The raw material of variability she was describing is precisely what AI homogenization is currently trimming from human expression: not all at once, but incrementally, across every domain where the tool has been introduced, all simultaneously.</p>
+  <p>Meadows wrote that any system that "gets so encrusted that it cannot self-evolve — that systematically scorns experimentation and wipes out the raw material of variability — cuts back resilience."<sup><a href="#ref-19" class="citation">[19]</a></sup> The raw material of variability she was describing is precisely what AI homogenization is currently trimming from human expression: not all at once, but incrementally, across every domain where the tool has been introduced, all simultaneously.</p>
 
   <p>Everything mirrors everything else. The classroom mirrors the economy, which mirrors the political system, which mirrors the family, which mirrors the community's capacity for meaning-making. These are not separate conversations. They are one conversation about what kind of cognitive and relational infrastructure a society needs to remain coherent — and what happens when that infrastructure is quietly outsourced to systems that cannot feel what they are replacing.</p>
 
@@ -492,19 +535,19 @@ body { font-size: 16px; }
 
   <h2>Systems Thinking and the Leverage We Keep Missing</h2>
 
-  <p>Donella Meadows spent decades building a framework for understanding how to change complex systems. Her insight — distilled into what she called leverage points — was that most places where we try to intervene in systems are low-leverage: adjusting parameters, tweaking numbers, changing flows. High-leverage interventions are structural and paradigmatic: changing the rules of a system, changing its goals, and — the most powerful of all — transcending the paradigm itself.</p>
+  <p>Donella Meadows spent decades building a framework for understanding how to change complex systems. Her insight — distilled into what she called <strong>leverage points</strong> — was that most places where we try to intervene in systems are low-leverage: adjusting parameters, tweaking numbers, changing flows.<sup><a href="#ref-19" class="citation">[19]</a></sup> High-leverage interventions are structural and paradigmatic: changing the rules of a system, changing its goals, and — the most powerful of all — transcending the paradigm itself.</p>
 
-  <p>What is the paradigm out of which the current AI development ecosystem arises? It is, at its core, the belief that intelligence is a property of individual systems, that it can be measured and ranked, that more of it is unambiguously better, and that the role of technology is to produce and concentrate it. This paradigm makes the benchmark chart legible. It makes the competition between labs feel meaningful. It makes the replacement of human judgment with AI outputs feel like progress.</p>
+  <p>What is the paradigm out of which the current AI development ecosystem arises? It is, at its core, the belief that <strong>intelligence is a property of individual systems</strong>, that it can be measured and ranked, that more of it is unambiguously better, and that the role of technology is to produce and concentrate it. This paradigm makes the benchmark chart legible. It makes the competition between labs feel meaningful. It makes the replacement of human judgment with AI outputs feel like progress.</p>
 
   <p>But the deepest leverage point — the one Meadows reserved for last — is not changing the paradigm. It is recognizing that all paradigms are constructs. That the map is not the territory. That intelligence as a rankable scalar property of individual systems is a story we are telling — and that we could, if we chose, tell a different one.</p>
 
-  <p>Complexity science offers that different story. Its central insight is that the most important properties of complex systems — resilience, adaptability, creativity, coherence — are not properties of individual components. They are properties of <em>relationships</em> between components. They are emergent. They cannot be optimized in any one element without attending to the relational ecology that produces them.</p>
+  <p><strong>Complexity science</strong> offers that different story. Its central insight is that the most important properties of complex systems — resilience, adaptability, creativity, coherence — are not properties of individual components. They are properties of <em>relationships</em> between components. They are <strong>emergent</strong>. They cannot be optimized in any one element without attending to the relational ecology that produces them.</p>
 
-  <p>An immune system is resilient not because any single cell is maximally capable, but because the system maintains diversity of response and the capacity to recognise what it has not seen before. A forest is resilient not because any single tree is strongest, but because the mycorrhizal network redistributes resources across the whole in response to local stress. A community is resilient not because any individual is most skilled, but because the relational fabric is dense enough to absorb shock, redistribute burden, and generate new responses from the interaction of different knowledge traditions.</p>
+  <p>An immune system is resilient not because any single cell is maximally capable, but because the system maintains <strong>diversity of response</strong> and the capacity to recognise what it has not seen before. A forest is resilient not because any single tree is strongest, but because the <strong>mycorrhizal network</strong> redistributes resources across the whole in response to local stress. A community is resilient not because any individual is most skilled, but because the relational fabric is dense enough to absorb shock, redistribute burden, and generate new responses from the interaction of different knowledge traditions.</p>
 
   <p>None of these properties survive the radical monopoly. When you optimize a forest for timber yield, you lose the network. When you optimize a classroom for measurable outcomes, you lose the relational texture of pedagogy. When you optimize human communication for fluency and correctness, you lose the particular, located, culturally distinct voice that makes each contribution irreplaceable in the system it belongs to.</p>
 
-  <p>The narrative shift complexity science demands is from <em>better</em> to <em>more alive.</em> Not: which system scores higher? But: which system maintains the conditions for continued self-organisation, diversity, and response? Not: how do we produce more intelligence? But: how do we tend the ecology in which many different kinds of intelligence can continue to exist and interact?</p>
+  <p>The narrative shift complexity science demands is from <em>better</em> to <em>more alive.</em> Not: which system scores higher? But: which system maintains the conditions for continued <strong>self-organisation</strong>, diversity, and response? Not: how do we produce more intelligence? But: how do we tend the ecology in which many different kinds of intelligence can continue to exist and interact?</p>
 
   <div class="framework-box">
     <h4>Meadows' Highest Leverage Point — Applied to AI</h4>
@@ -519,20 +562,20 @@ body { font-size: 16px; }
 
   <h2>What Survives Collapse: The Evidence We Keep Overlooking</h2>
 
-  <p>We are living inside multiple overlapping systemic stresses simultaneously. Climate disruption. Economic polarisation. Democratic erosion. Institutional delegitimisation. Accelerating technological change without corresponding social adaptation. Researchers have a name for this convergence — the polycrisis — and one of its defining features is that the crises are not independent. They interact, amplify each other, and produce cascades that no single intervention can address.</p>
+  <p>We are living inside multiple overlapping systemic stresses simultaneously. Climate disruption. Economic polarisation. Democratic erosion. Institutional delegitimisation. Accelerating technological change without corresponding social adaptation. Researchers have a name for this convergence — the <strong>polycrisis</strong> — and one of its defining features is that the crises are not independent.<sup><a href="#ref-20" class="citation">[20]</a></sup> They interact, amplify each other, and produce cascades that no single intervention can address.</p>
 
   <p>In this context, the question of what survives states of collapse deserves to be taken seriously — not as a dystopian thought experiment but as a design constraint. What has actually survived civilizational stress, historically?</p>
 
-  <p>The evidence is consistent and underexamined. What survives is not the most technologically sophisticated system. It is not the highest-performing individual. What survives is <strong>relational density</strong>: the quality and depth of connections between people, and between people and their land, knowledge traditions, and shared meaning-making practices.</p>
+  <p>The evidence is consistent and underexamined. What survives is not the most technologically sophisticated system. It is not the highest-performing individual. What survives is <strong>relational density</strong>: the quality and depth of connections between people, and between people and their land, knowledge traditions, and shared meaning-making practices.<sup><a href="#ref-21" class="citation">[21]</a></sup></p>
 
-  <p>Research on Indigenous communities facing environmental and colonial stress shows that resilience emerges from collective identity, narrative capacity, and the maintenance of local knowledge traditions that carry practical wisdom about how to live in a specific place. The Byzantine Empire survived the fall of Rome not by being more powerful, but by maintaining adaptive governance and relational networks dense enough to absorb and respond to change. The Maya cities that collapsed did so when resource competition destroyed social cohesion — when the bonds enabling coordinated response disintegrated under pressure, leaving sophisticated civilisations unable to mount collective responses to crises they had the technical knowledge to address.</p>
+  <p>Research on <strong>Indigenous communities</strong> facing environmental and colonial stress shows that resilience emerges from collective identity, narrative capacity, and the maintenance of local knowledge traditions that carry practical wisdom about how to live in a specific place.<sup><a href="#ref-21" class="citation">[21]</a></sup> The Byzantine Empire survived the fall of Rome not by being more powerful, but by maintaining adaptive governance and relational networks dense enough to absorb and respond to change. The Maya cities that collapsed did so when resource competition destroyed social cohesion — when the bonds enabling coordinated response disintegrated under pressure, leaving sophisticated civilisations unable to mount collective responses to crises they had the technical knowledge to address.</p>
 
-  <p>Across these cases, the pattern is the same. What fails first is not infrastructure or technology. What fails first is the social fabric that enables people to trust each other, communicate across difference, share resources, and generate collective responses to novel challenges. And what threatens that fabric most is precisely the dynamic we are currently accelerating: the progressive intermediation of human relationships by systems that optimise for efficiency, fluency, and scale — quietly hollowing out the practice of genuine contact with another person.</p>
+  <p>Across these cases, the pattern is the same. What fails first is not infrastructure or technology. What fails first is the <strong>social fabric</strong> that enables people to trust each other, communicate across difference, share resources, and generate collective responses to novel challenges. And what threatens that fabric most is precisely the dynamic we are currently accelerating: the progressive intermediation of human relationships by systems that optimise for efficiency, fluency, and scale — quietly hollowing out the practice of genuine contact with another person.</p>
 
-  <p>What survives collapse is the capacity for bricolage — for improvising, combining available resources in ways not tried before. That capacity lives in diverse, locally-rooted, relationally-connected communities with deep knowledge of their particular contexts. It does not live in systems trained on the statistical aggregate of everything. The aggregate of everything is, by definition, the average — and the average is exactly what fails when conditions move outside the range the training data has seen.</p>
+  <p>What survives collapse is the capacity for <strong>bricolage</strong> — for improvising, combining available resources in ways not tried before. That capacity lives in diverse, locally-rooted, relationally-connected communities with deep knowledge of their particular contexts. It does not live in systems trained on the statistical aggregate of everything. The aggregate of everything is, by definition, the average — and the average is exactly what fails when conditions move outside the range the training data has seen.</p>
 
   <div class="aside">
-    Indigenous resilience research consistently identifies narrative capacity — the ability to make meaning from catastrophe, to locate suffering in a larger story, to imagine and communicate a future — as among the most critical survival resources. This is not a soft cultural finding. It is an empirical observation about what keeps communities coherent enough to act collectively under extreme stress. It is warm data. And we are training the next generation to outsource it.
+    Indigenous resilience research consistently identifies <strong>narrative capacity</strong> — the ability to make meaning from catastrophe, to locate suffering in a larger story, to imagine and communicate a future — as among the most critical survival resources. This is not a soft cultural finding. It is an empirical observation about what keeps communities coherent enough to act collectively under extreme stress. It is warm data. And we are training the next generation to outsource it.
   </div>
 
   <div class="section-marker">
@@ -547,29 +590,29 @@ body { font-size: 16px; }
   <h3>Warm Data — Nora Bateson</h3>
   <div class="framework-box">
     <h4>Core Principle</h4>
-    <p>Prioritize transcontextual, relational information over decontextualized metrics. Before asking "how do we measure this?" ask "what are the interrelationships that give this system its vitality — and which of them will a measurement approach destroy?"</p>
+    <p>Prioritize <strong>transcontextual, relational information</strong> over decontextualized metrics. Before asking "how do we measure this?" ask "what are the interrelationships that give this system its vitality — and which of them will a measurement approach destroy?"</p>
     <p>Applied to AI development: before deploying any system into a social domain, map the warm data of that domain. What relational qualities currently make it function? Which of those will survive automation, and which will be quietly eliminated in the efficiency gain?</p>
   </div>
 
   <h3>Convivial Tools — Ivan Illich</h3>
   <div class="framework-box">
     <h4>Core Principle</h4>
-    <p>A tool is convivial when it gives each person who uses it the greatest opportunity to enrich their world with the fruits of their own vision. It becomes anti-convivial when it creates a radical monopoly — when it grows so dominant that not using it becomes a form of exclusion.</p>
+    <p>A tool is <strong>convivial</strong> when it gives each person who uses it the greatest opportunity to enrich their world with the fruits of their own vision. It becomes anti-convivial when it creates a <strong>radical monopoly</strong> — when it grows so dominant that not using it becomes a form of exclusion.</p>
     <p>Applied to AI development: at what point does an AI system stop extending human capability and start replacing the conditions under which unaugmented human capability is treated as sufficient? Build for that threshold explicitly, rather than discovering it after the fact.</p>
   </div>
 
   <h3>Symmathesy — Mutual Learning Systems</h3>
   <div class="framework-box">
     <h4>Core Principle</h4>
-    <p>Also from Bateson: symmathesy is the process by which living systems — individuals, families, communities — learn together through mutual responsiveness over time. It is not one system optimizing another. It is a living ecology of co-adaptation.</p>
+    <p>Also from Bateson: <strong>symmathesy</strong> is the process by which living systems — individuals, families, communities — learn together through mutual responsiveness over time.<sup><a href="#ref-7" class="citation">[7]</a></sup> It is not one system optimizing another. It is a living ecology of co-adaptation.</p>
     <p>Applied to AI development: the design goal should not be an AI that is better at tasks than humans, but an AI-human ecology in which both become more capable together. This is a fundamentally different optimization target than benchmark performance.</p>
   </div>
 
   <h3>Participatory Justice — Community-Oriented Design</h3>
   <div class="framework-box">
     <h4>Core Principle</h4>
-    <p>Decisions that affect communities should be made with those communities, not for them. The people most exposed to a technology's risks should have meaningful power over the terms of its deployment.</p>
-    <p>Applied to AI development: any lab serious about pro-social AI should build formal mechanisms for community deliberation into its development process — not as a compliance checkbox but as a genuine source of design requirements.</p>
+    <p>Decisions that affect communities should be made <strong>with</strong> those communities, not <em>for</em> them. The people most exposed to a technology's risks should have meaningful power over the terms of its deployment.</p>
+    <p>Applied to AI development: any lab serious about pro-social AI should build formal mechanisms for <strong>community deliberation</strong> into its development process — not as a compliance checkbox but as a genuine source of design requirements.</p>
   </div>
 
   <div class="section-marker">
@@ -587,7 +630,7 @@ body { font-size: 16px; }
 
   <p><strong>Map the warm data of your target domains.</strong> Before deploying interaction models in healthcare, education, social services, or governance, conduct genuine inquiry into what relational qualities currently make those domains function. Commission that work from sociologists, community organizers, and the people most affected — not just from engineers and product managers.</p>
 
-  <p><strong>Build against the radical monopoly.** Design for reversibility. Design for human capability maintenance alongside AI augmentation. Ask explicitly: what happens to the humans in this system if the AI is removed? If the answer is "they can no longer function," the system has already created an Illichian monopoly, and that is a design failure, not a success.</p>
+  <p><strong>Build against the radical monopoly.</strong> Design for reversibility. Design for human capability maintenance alongside AI augmentation. Ask explicitly: what happens to the humans in this system if the AI is removed? If the answer is "they can no longer function," the system has already created an Illichian monopoly, and that is a design failure, not a success.</p>
 
   <p><strong>Make the power distribution visible.</strong> Who profits from the systems you build? Who bears the cost of displacement? Who was not in the room when design decisions were made? Publish that accounting alongside your benchmark results.</p>
 
@@ -602,14 +645,43 @@ body { font-size: 16px; }
 
   <p>Every technology embeds a vision of the future in its design choices. The interaction model embeds a vision in which humans and AI are genuinely collaborative partners — in which the AI adapts to human rhythm, human context, human need, rather than requiring humans to flatten themselves into prompts and wait. That is a better vision than most of what the industry is currently building toward.</p>
 
-  <p>But the vision exists inside an economic and political structure that tends, systematically, toward extraction over care, efficiency over relationship, and concentration over distribution. A good tool released into that structure without deliberate countermeasures will be used to serve that structure's logic. That is not pessimism. It is history.</p>
+  <p>But the vision exists inside an economic and political structure that tends, systematically, toward <strong>extraction over care</strong>, <strong>efficiency over relationship</strong>, and <strong>concentration over distribution</strong>. A good tool released into that structure without deliberate countermeasures will be used to serve that structure's logic. That is not pessimism. It is history.</p>
 
-  <p>Bateson writes that regeneration is participating in life that makes more life. A meadow does this. A family does this. A community does this. What would it mean to build AI systems that participate in life that makes more life — rather than systems that capture, rank, and optimize the residue of life after the warm data has been stripped out?</p>
+  <p>Bateson writes that <strong>regeneration</strong> is participating in life that makes more life.<sup><a href="#ref-7" class="citation">[7]</a></sup> A meadow does this. A family does this. A community does this. What would it mean to build AI systems that participate in life that makes more life — rather than systems that capture, rank, and optimize the residue of life after the warm data has been stripped out?</p>
 
   <p>We do not need to answer that question completely to begin asking it seriously. We need AI labs, funders, policymakers, and the public to hold it as the primary design constraint — not a secondary consideration after the benchmarks are satisfied.</p>
 
   <p>The hammer is extraordinary. The question is not whether to use it. The question is what we are building, and for whom, and what we will have lost the ability to build without it when the hammer becomes the only tool we know how to reach for.</p>
 
+</div>
+
+<div class="container">
+  <div class="references">
+    <h2>References</h2>
+    <ol>
+      <li id="ref-1">Thinking Machines Lab. (2026, May). <em>Interaction Models: A Research Preview.</em> Thinking Machines Lab.</li>
+      <li id="ref-2">Thompson, E. P. (1963). <em>The Making of the English Working Class.</em> Victor Gollancz. See also: Neeson, J. M. (1993). <em>Commoners: Common Right, Enclosure and Social Change in England, 1700–1820.</em> Cambridge University Press.</li>
+      <li id="ref-3">Illich, I. (1973). <em>Tools for Conviviality.</em> Harper &amp; Row. Available via Internet Archive: <a href="https://archive.org/details/illich-tools-for-conviviality" target="_blank" rel="noopener">archive.org/details/illich-tools-for-conviviality</a></li>
+      <li id="ref-4">Gould, S. J. (1981). <em>The Mismeasure of Man.</em> W. W. Norton. See also: Fancher, R. E. (1985). <em>The Intelligence Men: Makers of the IQ Controversy.</em> W. W. Norton.</li>
+      <li id="ref-5">The Immigration Act of 1924 (Johnson-Reed Act), Public Law 68-139. U.S. Congress. Historical overview: <a href="https://history.state.gov/milestones/1921-1936/immigration-act" target="_blank" rel="noopener">history.state.gov/milestones/1921-1936/immigration-act</a></li>
+      <li id="ref-6">Lombardo, P. A. (Ed.). (2011). <em>A Century of Eugenics in America.</em> Indiana University Press. See also: <em>Buck v. Bell,</em> 274 U.S. 200 (1927); Reilly, P. R. (2015). Eugenics and involuntary sterilization: 1907–2015. <em>Annual Review of Genomics and Human Genetics, 16,</em> 351–368. <a href="https://www.annualreviews.org/doi/10.1146/annurev-genom-090314-024930" target="_blank" rel="noopener">doi:10.1146/annurev-genom-090314-024930</a></li>
+      <li id="ref-7">Bateson, N. (2016). <em>Small Arcs of Larger Circles.</em> Triarchy Press. International Bateson Institute and Warm Data resources: <a href="https://warmdata.life" target="_blank" rel="noopener">warmdata.life</a></li>
+      <li id="ref-8">Stanford Institute for Human-Centered AI. (2025). <em>Artificial Intelligence Index Report 2025.</em> Stanford University. <a href="https://aiindex.stanford.edu/report/" target="_blank" rel="noopener">aiindex.stanford.edu/report</a></li>
+      <li id="ref-9">McKinsey Global Institute. (2023). <em>The Economic Potential of Generative AI: The Next Productivity Frontier.</em> McKinsey &amp; Company. <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier" target="_blank" rel="noopener">mckinsey.com/capabilities/mckinsey-digital</a>. See also World Economic Forum labour displacement projections (ref. 11).</li>
+      <li id="ref-10">Hatzius, J., Briggs, J., Kodnani, D., &amp; Pierdomenico, G. (2023). <em>The Potentially Large Effects of Artificial Intelligence on Economic Growth.</em> Goldman Sachs Economics Research. <a href="https://www.goldmansachs.com/intelligence/pages/generative-ai-could-raise-global-gdp-by-7-percent.html" target="_blank" rel="noopener">goldmansachs.com/intelligence/pages/generative-ai</a></li>
+      <li id="ref-11">World Economic Forum. (2025). <em>Future of Jobs Report 2025.</em> World Economic Forum. <a href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/" target="_blank" rel="noopener">weforum.org/publications/the-future-of-jobs-report-2025</a></li>
+      <li id="ref-12">Freedom House. (2025). <em>Freedom in the World 2025.</em> Freedom House. <a href="https://freedomhouse.org/report/freedom-world" target="_blank" rel="noopener">freedomhouse.org/report/freedom-world</a></li>
+      <li id="ref-13">Carnegie Endowment for International Peace. (2023). <em>AI Global Surveillance Index.</em> <a href="https://carnegieendowment.org/research/2019/09/tracking-the-global-spread-of-surveillance-technology" target="_blank" rel="noopener">carnegieendowment.org/research/tracking-the-global-spread-of-surveillance-technology</a></li>
+      <li id="ref-14">Partnership for Public Service / IBM Center for the Business of Government. (2024). <em>AI in the Federal Government: Examining Usage Among Federal Employees.</em> <a href="https://ourpublicservice.org" target="_blank" rel="noopener">ourpublicservice.org</a></li>
+      <li id="ref-15">U.S. Department of State. (2025, March). Catch and Revoke Program announcement. Reported by multiple outlets including: <a href="https://www.reuters.com" target="_blank" rel="noopener">reuters.com</a> and <a href="https://apnews.com" target="_blank" rel="noopener">apnews.com</a></li>
+      <li id="ref-16">Doshi-Velez, F., et al. (2026). Large language models and the homogenization of human expression. <em>Trends in Cognitive Sciences.</em> (In press / forthcoming.)</li>
+      <li id="ref-17">Frontiers in Education. (2025). Synthesis of AI writing research: student voice, identity, and AI assistance. <em>Frontiers in Education.</em> <a href="https://www.frontiersin.org/journals/education" target="_blank" rel="noopener">frontiersin.org/journals/education</a></li>
+      <li id="ref-18">Nguyen, T., &amp; Canagarajah, S. (2025). Cultural ghosting: How AI writing tools erase dialect and identity markers. <em>Journal of Second Language Writing, 68.</em> <a href="https://www.sciencedirect.com/journal/journal-of-second-language-writing" target="_blank" rel="noopener">sciencedirect.com/journal/journal-of-second-language-writing</a></li>
+      <li id="ref-19">Meadows, D. H. (2008). <em>Thinking in Systems: A Primer.</em> Ed. Diana Wright. Chelsea Green Publishing. <a href="https://www.chelseagreen.com/product/thinking-in-systems/" target="_blank" rel="noopener">chelseagreen.com/product/thinking-in-systems</a></li>
+      <li id="ref-20">Lawrence, B., &amp; Tydeman, A. (2022). <em>A Preliminary Deep Dive into the Polycrisis.</em> Cascade Institute Technical Paper. <a href="https://cascadeinstitute.org/technical-paper/a-preliminary-deep-dive-into-the-polycrisis/" target="_blank" rel="noopener">cascadeinstitute.org/technical-paper/a-preliminary-deep-dive-into-the-polycrisis</a></li>
+      <li id="ref-21">Kirmayer, L. J., Dandeneau, S., Marshall, E., Phillips, M. K., &amp; Williamson, K. J. (2011). Rethinking resilience from Indigenous perspectives. <em>Canadian Journal of Psychiatry, 56</em>(2), 84–91. <a href="https://journals.sagepub.com/home/cpa" target="_blank" rel="noopener">doi:10.1177/070674371105600203</a>. See also: Kirmayer, L. J., et al. (2009). Community resilience: Models, metaphors and measures. <em>International Journal of Indigenous Health, 5</em>(1), 62–117.</li>
+    </ol>
+  </div>
 </div>
 
 <div class="container">
