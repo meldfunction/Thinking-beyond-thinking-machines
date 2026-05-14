@@ -303,6 +303,33 @@ text-decoration: none;
 border-bottom: 1px solid var(–cool);
 }
 
+/* Love letter */
+.love-letter {
+border-left: 3px solid var(–warm);
+margin: 3rem 0 4rem;
+padding: 2rem 2.5rem;
+background: rgba(200, 169, 110, 0.07);
+}
+
+.love-letter .letter-label {
+font-family: 'DM Mono', monospace;
+font-size: 0.68rem;
+letter-spacing: 0.25em;
+text-transform: uppercase;
+color: var(–warm);
+margin-bottom: 1.25rem;
+}
+
+.love-letter p {
+font-family: 'DM Sans', sans-serif;
+font-size: 0.975rem;
+line-height: 1.8;
+color: #3a3530;
+margin-bottom: 1rem;
+}
+
+.love-letter p:last-child { margin-bottom: 0; }
+
 /* Responsive */
 @media (max-width: 600px) {
 body { font-size: 16px; }
@@ -333,6 +360,14 @@ body { font-size: 16px; }
 </div>
 
 <div class="container body-text">
+
+  <div class="love-letter">
+    <div class="letter-label">A note to Mira and the team at Thinking Machines Lab</div>
+    <p>What you built this month is not incremental. Breaking the turn-based architecture — giving AI the ability to think alongside a person rather than wait for them to finish — opens domains that have been structurally closed since this field began. The doctor mid-examination. The teacher present in the exact moment a student's understanding shifts. The researcher thinking out loud. These are the people who could never fit their work into a prompt. You reached them. That matters, and this essay begins by saying so clearly.</p>
+    <p>What follows is not a critique of the model. It is an attempt to map the world the model is being released into — the historical patterns that tend to determine who benefits from breakthroughs like yours, the structural forces that run against the warm intentions behind the technology, and the paths that exist toward something better. It is also an acknowledgment that those structural forces are larger than any lab can redirect alone.</p>
+    <p>But you are not just any lab right now. You have built something that works, and that gives you a credibility and a platform that most people in this conversation do not have. What we hope this encourages you to do is use it — to say from inside the room what the structural conditions of AI development are actually doing, to make the choices that compound over time toward human capability rather than dependency, and to direct the attention and resources your breakthrough has earned toward the communities and questions the industry consistently leaves out of the room.</p>
+    <p>The essay is long. Start anywhere. The argument holds from any direction.</p>
+  </div>
 
   <div class="section-marker">
     <span class="section-number">I</span>
