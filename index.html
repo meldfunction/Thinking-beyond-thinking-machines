@@ -338,11 +338,95 @@ margin-bottom: 1rem;
 
 .love-letter p:last-child { margin-bottom: 0; }
 
+
+/* Term tooltips */
+.term {
+border-bottom: 1px dashed var(–cool);
+cursor: help;
+position: relative;
+display: inline;
+}
+
+.term::after {
+content: attr(data-tooltip);
+position: absolute;
+bottom: calc(100% + 8px);
+left: 50%;
+transform: translateX(-50%);
+background: var(–ink);
+color: var(–paper);
+padding: 0.6rem 0.85rem;
+border-radius: 3px;
+font-size: 0.72rem;
+font-family: 'DM Sans', sans-serif;
+font-style: normal;
+font-weight: 400;
+line-height: 1.5;
+width: 230px;
+z-index: 200;
+opacity: 0;
+pointer-events: none;
+transition: opacity 0.15s;
+white-space: normal;
+text-align: left;
+box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.term::before {
+content: '';
+position: absolute;
+bottom: calc(100% + 2px);
+left: 50%;
+transform: translateX(-50%);
+border: 5px solid transparent;
+border-top-color: var(–ink);
+opacity: 0;
+pointer-events: none;
+transition: opacity 0.15s;
+z-index: 200;
+}
+
+.term:hover::after,
+.term:focus::after,
+.term.tooltip-active::after {
+opacity: 1;
+}
+
+.term:hover::before,
+.term:focus::before,
+.term.tooltip-active::before {
+opacity: 1;
+}
+
+.term:focus { outline: 2px dotted var(–cool); outline-offset: 2px; border-bottom: none; }
+
+/* Section anchor links */
+.section-anchor {
+margin-left: 0.5rem;
+color: var(–rule);
+text-decoration: none;
+font-size: 0.85rem;
+font-family: 'DM Mono', monospace;
+opacity: 0;
+transition: opacity 0.15s;
+vertical-align: middle;
+}
+
+h2:hover .section-anchor,
+h2:focus-within .section-anchor { opacity: 1; }
+
 /* Responsive */
 @media (max-width: 600px) {
 body { font-size: 16px; }
 .pull-quote { margin: 2rem -1.5rem; padding: 2rem 1.5rem; font-size: 1.1rem; }
 .container { padding: 0 1.25rem; }
+.love-letter { padding: 1.25rem 1.5rem; margin: 2rem 0 3rem; }
+.framework-box { padding: 1.25rem; }
+.aside { padding-left: 0.875rem; }
+.section-anchor { display: none; }
+.term::after { width: 160px; left: 0; transform: none; max-width: calc(100vw - 2rem); }
+.term::before { left: 8px; transform: none; }
+h2 { font-size: 1.3rem; }
 }
 </style>
 
@@ -382,11 +466,11 @@ body { font-size: 16px; }
     <div class="section-rule"></div>
   </div>
 
-  <h2>Start With What They Got Right</h2>
+  <h2 id="section-i">Start With What They Got Right<a class="section-anchor" href="#section-i" aria-label="Link to section">¶</a></h2>
 
-  <p>In May 2026, Thinking Machines Lab released a research preview of what they call <strong>interaction models</strong> — AI systems designed not to wait for a human prompt but to engage in continuous, real-time exchange across audio, video, and text.<sup><a href="#ref-1" class="citation">[1]</a></sup> The model processes input and output in <strong>200-millisecond chunks</strong> — roughly the speed of human reaction time. It can interrupt, react to silence, track elapsed time, and respond to visual cues without being explicitly told to.</p>
+  <p>In May 2026, Thinking Machines Lab released a research preview of what they call <strong><span class="term" data-tooltip="AI systems that engage continuously across audio, video, and text — without waiting for a complete prompt. A different category of human–AI relationship." tabindex="0">interaction models</span></strong> — AI systems designed not to wait for a human prompt but to engage in continuous, real-time exchange across audio, video, and text.<sup><a href="#ref-1" class="citation">[1]</a></sup> The model processes input and output in <strong>200-millisecond chunks</strong> — roughly the speed of human reaction time. It can interrupt, react to silence, track elapsed time, and respond to visual cues without being explicitly told to.</p>
 
-  <p>To understand why this matters, it helps to be precise about what every other major AI system currently does — and does not do. GPT, Claude, Gemini, and their contemporaries all operate on a <strong>turn-based interface</strong>: you formulate a complete thought, submit it, wait one to five seconds, receive a complete response, then repeat. Even “voice mode” implementations are structurally turn-based — the model stops processing between your turns. This is not how human collaboration works. It is how you interact with a vending machine.</p>
+  <p>To understand why this matters, it helps to be precise about what every other major AI system currently does — and does not do. GPT, Claude, Gemini, and their contemporaries all operate on a <strong><span class="term" data-tooltip="The standard AI pattern: submit a complete thought, wait, receive a full response, repeat. Like interacting with a vending machine rather than a colleague." tabindex="0">turn-based interface</span></strong>: you formulate a complete thought, submit it, wait one to five seconds, receive a complete response, then repeat. Even “voice mode” implementations are structurally turn-based — the model stops processing between your turns. This is not how human collaboration works. It is how you interact with a vending machine.</p>
 
   <p>The most valuable applications of AI — medical consultation while a doctor examines a patient, real-time tutoring as a student works through a problem, collaborative editing while a writer thinks out loud, crisis support as someone tries to articulate distress — all require something turn-based systems structurally cannot provide: continuous, contextual presence that adjusts as the human adjusts, without requiring the human to stop, formulate, and submit. A teacher cannot pause a student’s moment of breakthrough to compose a prompt. A therapist cannot interrupt a session to type a query. Turn-based AI reaches these domains and then hits a wall that is not a technical problem but an architectural one.</p>
 
@@ -403,11 +487,11 @@ body { font-size: 16px; }
     <div class="section-rule"></div>
   </div>
 
-  <h2>How Power Builds Containers for Abuse</h2>
+  <h2 id="section-ii">How Power Builds Containers for Abuse<a class="section-anchor" href="#section-ii" aria-label="Link to section">¶</a></h2>
 
-  <p>History does not repeat, but it does rhyme in its structures. The <strong>enclosure movement</strong> in England between the 13th and 19th centuries offers a pattern that deserves serious attention here.<sup><a href="#ref-2" class="citation">[2]</a></sup> For centuries, rural communities maintained <strong>common land</strong> — shared pastures, forests, and waterways that anyone could use to graze animals, gather food, and sustain a household. The enclosures privatized that land, piece by piece, under legal frameworks that looked perfectly reasonable in their own terms. The result was ecological disconnection, social stratification, and the funneling of human labor into wage-dependent industrial systems.</p>
+  <p>History does not repeat, but it does rhyme in its structures. The <strong><span class="term" data-tooltip="The privatization of common land in England (13th–19th century) — shared resources converted into private property that workers then had to rent to survive." tabindex="0">enclosure movement</span></strong> in England between the 13th and 19th centuries offers a pattern that deserves serious attention here.<sup><a href="#ref-2" class="citation">[2]</a></sup> For centuries, rural communities maintained <strong>common land</strong> — shared pastures, forests, and waterways that anyone could use to graze animals, gather food, and sustain a household. The enclosures privatized that land, piece by piece, under legal frameworks that looked perfectly reasonable in their own terms. The result was ecological disconnection, social stratification, and the funneling of human labor into wage-dependent industrial systems.</p>
 
-  <p>The philosopher Ivan Illich, writing in <em>Tools for Conviviality</em> in 1973, identified this as a template.<sup><a href="#ref-3" class="citation">[3]</a></sup> He called it the creation of a <strong>radical monopoly</strong>: when a tool or institution grows so large and so embedded that it eliminates the conditions under which alternatives could exist. The car created a radical monopoly on movement — not by forcing people into cars, but by redesigning cities so that not having a car became practically impossible. Compulsory schooling created a radical monopoly on learning — not by banning other forms of education, but by making the credential the prerequisite for everything else.</p>
+  <p>The philosopher Ivan Illich, writing in <em>Tools for Conviviality</em> in 1973, identified this as a template.<sup><a href="#ref-3" class="citation">[3]</a></sup> He called it the creation of a <strong><span class="term" data-tooltip="When a tool grows so dominant it eliminates the conditions under which alternatives can exist. Coined by Ivan Illich, 1973." tabindex="0">radical monopoly</span></strong>: when a tool or institution grows so large and so embedded that it eliminates the conditions under which alternatives could exist. The car created a radical monopoly on movement — not by forcing people into cars, but by redesigning cities so that not having a car became practically impossible. Compulsory schooling created a radical monopoly on learning — not by banning other forms of education, but by making the credential the prerequisite for everything else.</p>
 
   <blockquote>
     Convivial tools are those which give each person who uses them the greatest opportunity to enrich the environment with the fruits of his or her vision. Industrial tools deny this possibility.
@@ -423,7 +507,7 @@ body { font-size: 16px; }
     <div class="section-rule"></div>
   </div>
 
-  <h2>Intelligence as a Word With a Body Count</h2>
+  <h2 id="section-iii">Intelligence as a Word With a Body Count<a class="section-anchor" href="#section-iii" aria-label="Link to section">¶</a></h2>
 
   <p>Thinking Machines labels the Y-axis of their benchmark chart <em>Intelligence.</em> It is a small typographic choice with a long, violent history. And Thinking Machines is not alone. In May 2026, a site called <strong>AI IQ</strong> (aiiq.org) launched to widespread attention, plotting more than 50 frontier AI models on a standard human IQ bell curve — complete with a normal distribution, a right tail of high scorers, and estimated quotients reaching 136.<sup><a href="#ref-22" class="citation">[22]</a></sup> The backlash was immediate. “It’s nonsense. AI is far too jagged. <strong>The map is not the territory</strong>,” wrote one commentator. “As useless as human IQ testing,” wrote another. But the site also drew enthusiastic praise from enterprise technologists who said it made “an impossibly complex market legible.”</p>
 
@@ -446,9 +530,9 @@ body { font-size: 16px; }
     <div class="section-rule"></div>
   </div>
 
-  <h2>Warm Data and What Gets Lost</h2>
+  <h2 id="section-iv">Warm Data and What Gets Lost<a class="section-anchor" href="#section-iv" aria-label="Link to section">¶</a></h2>
 
-  <p>Nora Bateson, President of the International Bateson Institute, offers a framework that cuts directly to why this reduction is dangerous. She calls it <strong>Warm Data</strong>.<sup><a href="#ref-7" class="citation">[7]</a></sup></p>
+  <p>Nora Bateson, President of the International Bateson Institute, offers a framework that cuts directly to why this reduction is dangerous. She calls it <strong><span class="term" data-tooltip="Information that retains its relational context. Coined by Nora Bateson — the kind of data that lets you know when to tell someone you love them." tabindex="0">Warm Data</span></strong>.<sup><a href="#ref-7" class="citation">[7]</a></sup></p>
 
   <blockquote>
     Warm Data is information that is alive. Warm Data itches when it is confined. It is the kind of information that lets you know when to tell someone you love them.
@@ -478,7 +562,7 @@ body { font-size: 16px; }
     <div class="section-rule"></div>
   </div>
 
-  <h2>Capital, Commodification, and the Capture of Human Expression</h2>
+  <h2 id="section-v">Capital, Commodification, and the Capture of Human Expression<a class="section-anchor" href="#section-v" aria-label="Link to section">¶</a></h2>
 
   <p>None of this is happening in a vacuum. It is happening inside a specific economic structure in which the development of AI is almost entirely funded by, governed by, and oriented toward the logic of <strong>capital accumulation</strong>.</p>
 
@@ -494,7 +578,7 @@ body { font-size: 16px; }
     The displacement effects of AI are not evenly distributed. High-wage, highly skilled roles increase while low-wage roles decrease, driving <strong>employment polarization</strong> and intensifying socioeconomic inequality — particularly in regions and industries with limited access to reskilling programs. This is not a prediction. It is the current, observed empirical record.
   </div>
 
-  <p>Meanwhile, the companies building these systems are consolidating wealth, data, and decision-making power at a pace that has no historical precedent. We are witnessing, in Illich’s terms, the construction of a <strong>radical monopoly over cognitive labor</strong> — not forced by law but created by a market logic in which AI tools gradually become so embedded in every institution that human performance without them begins to look inadequate by design.</p>
+  <p>Meanwhile, the companies building these systems are consolidating wealth, data, and decision-making power at a pace that has no historical precedent. We are witnessing, in Illich’s terms, the construction of a <strong><span class="term" data-tooltip="When AI becomes so embedded in cognitive work that performing it without AI assistance feels inadequate by design — the enclosure pattern applied to the mind." tabindex="0">radical monopoly over cognitive labor</span></strong> — not forced by law but created by a market logic in which AI tools gradually become so embedded in every institution that human performance without them begins to look inadequate by design.</p>
 
   <p>The <strong>means of production</strong> for cognitive work — writing, analysis, design, code, synthesis, judgment — are moving rapidly into the hands of a handful of infrastructure and model owners. Workers do not own the tools; they pay subscription fees for access. This is the enclosure pattern applied to the mind. For centuries, the enclosure movement converted common land — held collectively, worked by those who depended on it — into private property that the same workers then had to rent back to survive. The AI equivalent is already underway: the collective output of human knowledge, creativity, and expression — books, code, art, conversation — was scraped without consent or compensation to train the models. Those models are now sold back to the people whose labor trained them, at monthly subscription rates, to do the work that labor used to do. The extraction is recursive: your past cognitive output trains the system that competes with your future cognitive labor, and you pay for the privilege of accessing it.</p>
 
@@ -505,7 +589,7 @@ body { font-size: 16px; }
     <div class="section-rule"></div>
   </div>
 
-  <h2>Who Is Affected That We Are Not Thinking About</h2>
+  <h2 id="section-vi">Who Is Affected That We Are Not Thinking About<a class="section-anchor" href="#section-vi" aria-label="Link to section">¶</a></h2>
 
   <p>There is an assumption embedded in every AI product launch, benchmark chart, and investment thesis: that the relevant actors are the labs building the systems, the enterprises deploying them, and the knowledge workers using them. The people most affected by these systems are rarely in the room when decisions are made.</p>
 
@@ -522,7 +606,7 @@ body { font-size: 16px; }
     <div class="section-rule"></div>
   </div>
 
-  <h2>The Democratic Stakes</h2>
+  <h2 id="section-vii">The Democratic Stakes<a class="section-anchor" href="#section-vii" aria-label="Link to section">¶</a></h2>
 
   <p>The risk is not only economic. It is constitutional in the deepest sense.</p>
 
@@ -537,7 +621,7 @@ body { font-size: 16px; }
     <div class="section-rule"></div>
   </div>
 
-  <h2>The Classroom as Early Warning System</h2>
+  <h2 id="section-viii">The Classroom as Early Warning System<a class="section-anchor" href="#section-viii" aria-label="Link to section">¶</a></h2>
 
   <p>If you want to know what AI is doing to human cognition, do not look at benchmark charts. Look at a first-year university writing seminar.</p>
 
@@ -550,11 +634,11 @@ body { font-size: 16px; }
     <cite>— <em>Frontiers in Education</em>, 2025 synthesis of AI writing research<sup><a href="#ref-17" class="citation">[17]</a></sup></cite>
   </blockquote>
 
-  <p>The research on what is being lost is accumulating rapidly. Studies find that AI-supported students score better on fluency and elaboration in idea generation tasks — but also exhibit <strong>cognitive fixation</strong> and lower creative confidence, over-relying on AI suggestions as a ceiling rather than a floor. Researchers describe a pattern of <strong>cognitive offloading</strong>: the effortful work of forming a thought, finding words, tolerating the discomfort of not knowing — work that is, developmentally, precisely the point — is being bypassed. The shortcut feels like efficiency. It functions as atrophy.</p>
+  <p>The research on what is being lost is accumulating rapidly. Studies find that AI-supported students score better on fluency and elaboration in idea generation tasks — but also exhibit <strong>cognitive fixation</strong> and lower creative confidence, over-relying on AI suggestions as a ceiling rather than a floor. Researchers describe a pattern of <strong><span class="term" data-tooltip="Using external tools to bypass the effortful work of forming thoughts. Feels like efficiency; functions as atrophy." tabindex="0">cognitive offloading</span></strong>: the effortful work of forming a thought, finding words, tolerating the discomfort of not knowing — work that is, developmentally, precisely the point — is being bypassed. The shortcut feels like efficiency. It functions as atrophy.</p>
 
   <p>For English language learners and second-language writers, the stakes are even more pointed. Writing in a second language is not merely a technical skill. It is an act of <strong>identity construction</strong> — of bringing a self, with its particular history and cultural inheritance, into relationship with a new linguistic world. Research on multilingual writers finds that without critical engagement with AI output, students risk homogenizing their writing and losing the individual markers of who they are. One student, recognising the problem, put it with remarkable clarity: <em>“Our voice is unique, even though there are some grammar mistakes or the flow doesn’t run very smooth — but that is all better than the same structures from AI.”</em><sup><a href="#ref-17" class="citation">[17]</a></sup></p>
 
-  <p>A parallel body of research has identified what it calls <strong>cultural ghosting</strong> — the process by which AI writing assistants, responding to benign requests like “make this more professional,” systematically remove <strong>culturally specific linguistic markers</strong> while preserving the semantic content.<sup><a href="#ref-18" class="citation">[18]</a></sup> Nigerian English, Indian English, AAVE, Singaporean English — the features that carry social meaning, that locate a writer inside a community and a history — are treated as errors to be corrected toward a standard that is, invariably, a Western professional norm. The meaning survives. The person disappears. The user did not ask to be erased. They asked for help.</p>
+  <p>A parallel body of research has identified what it calls <strong><span class="term" data-tooltip="The systematic removal of culturally specific linguistic markers by AI writing tools — erasing identity and voice while preserving semantic content." tabindex="0">cultural ghosting</span></strong> — the process by which AI writing assistants, responding to benign requests like “make this more professional,” systematically remove <strong>culturally specific linguistic markers</strong> while preserving the semantic content.<sup><a href="#ref-18" class="citation">[18]</a></sup> Nigerian English, Indian English, AAVE, Singaporean English — the features that carry social meaning, that locate a writer inside a community and a history — are treated as errors to be corrected toward a standard that is, invariably, a Western professional norm. The meaning survives. The person disappears. The user did not ask to be erased. They asked for help.</p>
 
   <p>What the classroom is revealing is not primarily a crisis of academic integrity. It is a <strong>crisis of formation</strong>. Writing — especially creative and personal writing — is not a way of communicating what you already think. It is a primary mechanism by which thinking happens, by which a self is built, by which a person discovers what they believe and what they value. When that process is outsourced to a system trained on the aggregate of everyone else’s expression, the loss is not just stylistic. It is ontological.</p>
 
@@ -563,7 +647,7 @@ body { font-size: 16px; }
     <div class="section-rule"></div>
   </div>
 
-  <h2>Change Is Never Local: Education as Ecosystem Signal</h2>
+  <h2 id="section-ix">Change Is Never Local: Education as Ecosystem Signal<a class="section-anchor" href="#section-ix" aria-label="Link to section">¶</a></h2>
 
   <p>Here is the move that <strong>systems thinking</strong> forces us to make: stop treating the classroom as a separate domain.</p>
 
@@ -592,9 +676,9 @@ body { font-size: 16px; }
     <div class="section-rule"></div>
   </div>
 
-  <h2>Systems Thinking and the Leverage We Keep Missing</h2>
+  <h2 id="section-x">Systems Thinking and the Leverage We Keep Missing<a class="section-anchor" href="#section-x" aria-label="Link to section">¶</a></h2>
 
-  <p>Donella Meadows spent decades building a framework for understanding how to change complex systems. Her insight — distilled into what she called <strong>leverage points</strong> — was that most places where we try to intervene in systems are low-leverage: adjusting parameters, tweaking numbers, changing flows.<sup><a href="#ref-19" class="citation">[19]</a></sup> High-leverage interventions are structural and paradigmatic: changing the rules of a system, changing its goals, and — the most powerful of all — transcending the paradigm itself.</p>
+  <p>Donella Meadows spent decades building a framework for understanding how to change complex systems. Her insight — distilled into what she called <strong><span class="term" data-tooltip="Places in a complex system where a small shift produces large changes. From Donella Meadows — the most powerful leverage point is transcending the paradigm itself." tabindex="0">leverage points</span></strong> — was that most places where we try to intervene in systems are low-leverage: adjusting parameters, tweaking numbers, changing flows.<sup><a href="#ref-19" class="citation">[19]</a></sup> High-leverage interventions are structural and paradigmatic: changing the rules of a system, changing its goals, and — the most powerful of all — transcending the paradigm itself.</p>
 
   <p>What is the paradigm out of which the current AI development ecosystem arises? It is, at its core, the belief that <strong>intelligence is a property of individual systems</strong>, that it can be measured and ranked, that more of it is unambiguously better, and that the role of technology is to produce and concentrate it. This paradigm makes the benchmark chart legible. It makes the competition between labs feel meaningful. It makes the replacement of human judgment with AI outputs feel like progress.</p>
 
@@ -619,9 +703,9 @@ body { font-size: 16px; }
     <div class="section-rule"></div>
   </div>
 
-  <h2>What Survives Collapse: The Evidence We Keep Overlooking</h2>
+  <h2 id="section-xi">What Survives Collapse: The Evidence We Keep Overlooking<a class="section-anchor" href="#section-xi" aria-label="Link to section">¶</a></h2>
 
-  <p>We are living inside multiple overlapping systemic stresses simultaneously. Climate disruption. Economic polarisation. Democratic erosion. Institutional delegitimisation. Accelerating technological change without corresponding social adaptation. Researchers have a name for this convergence — the <strong>polycrisis</strong> — and one of its defining features is that the crises are not independent.<sup><a href="#ref-20" class="citation">[20]</a></sup> They interact, amplify each other, and produce cascades that no single intervention can address.</p>
+  <p>We are living inside multiple overlapping systemic stresses simultaneously. Climate disruption. Economic polarisation. Democratic erosion. Institutional delegitimisation. Accelerating technological change without corresponding social adaptation. Researchers have a name for this convergence — the <strong><span class="term" data-tooltip="Multiple overlapping systemic crises — climate, economic, democratic, institutional — that interact and amplify each other, producing cascades no single intervention can address." tabindex="0">polycrisis</span></strong> — and one of its defining features is that the crises are not independent.<sup><a href="#ref-20" class="citation">[20]</a></sup> They interact, amplify each other, and produce cascades that no single intervention can address.</p>
 
   <p>In this context, the question of what survives states of collapse deserves to be taken seriously — not as a dystopian thought experiment but as a design constraint. What has actually survived civilizational stress, historically?</p>
 
@@ -631,7 +715,7 @@ body { font-size: 16px; }
 
   <p>Across these cases, the pattern is the same. What fails first is not infrastructure or technology. What fails first is the <strong>social fabric</strong> that enables people to trust each other, communicate across difference, share resources, and generate collective responses to novel challenges. And what threatens that fabric most is precisely the dynamic we are currently accelerating: the progressive intermediation of human relationships by systems that optimise for efficiency, fluency, and scale — quietly hollowing out the practice of genuine contact with another person.</p>
 
-  <p>What survives collapse is the capacity for <strong>bricolage</strong> — for improvising, combining available resources in ways not tried before. That capacity lives in diverse, locally-rooted, relationally-connected communities with deep knowledge of their particular contexts. It does not live in systems trained on the statistical aggregate of everything. The aggregate of everything is, by definition, the average — and the average is exactly what fails when conditions move outside the range the training data has seen.</p>
+  <p>What survives collapse is the capacity for <strong><span class="term" data-tooltip="Improvising solutions by combining available resources in unexpected ways. A key survival capacity of resilient communities facing novel challenges." tabindex="0">bricolage</span></strong> — for improvising, combining available resources in ways not tried before. That capacity lives in diverse, locally-rooted, relationally-connected communities with deep knowledge of their particular contexts. It does not live in systems trained on the statistical aggregate of everything. The aggregate of everything is, by definition, the average — and the average is exactly what fails when conditions move outside the range the training data has seen.</p>
 
   <div class="aside">
     Indigenous resilience research consistently identifies <strong>narrative capacity</strong> — the ability to make meaning from catastrophe, to locate suffering in a larger story, to imagine and communicate a future — as among the most critical survival resources. This is not a soft cultural finding. It is an empirical observation about what keeps communities coherent enough to act collectively under extreme stress. It is warm data. And we are training the next generation to outsource it.
@@ -642,7 +726,7 @@ body { font-size: 16px; }
     <div class="section-rule"></div>
   </div>
 
-  <h2>Alternative Frameworks: Seeing the Longer Arc</h2>
+  <h2 id="section-xii">Alternative Frameworks: Seeing the Longer Arc<a class="section-anchor" href="#section-xii" aria-label="Link to section">¶</a></h2>
 
   <p>None of this is inevitable. But avoiding these outcomes requires frameworks that can hold more complexity than a benchmark chart allows. Here are some that offer genuine traction.</p>
 
@@ -663,7 +747,7 @@ body { font-size: 16px; }
   <h3>Symmathesy — Mutual Learning Systems</h3>
   <div class="framework-box">
     <h4>Core Principle</h4>
-    <p>Also from Bateson: <strong>symmathesy</strong> is the process by which living systems — individuals, families, communities — learn together through mutual responsiveness over time.<sup><a href="#ref-7" class="citation">[7]</a></sup> It is not one system optimizing another. It is a living ecology of co-adaptation.</p>
+    <p>Also from Bateson: <strong><span class="term" data-tooltip="The process by which living systems — individuals, families, communities — learn together through mutual responsiveness over time. Not optimization: co-evolution. Term from Nora Bateson." tabindex="0">symmathesy</span></strong> is the process by which living systems — individuals, families, communities — learn together through mutual responsiveness over time.<sup><a href="#ref-7" class="citation">[7]</a></sup> It is not one system optimizing another. It is a living ecology of co-adaptation.</p>
     <p>Applied to AI development: the design goal should not be an AI that is better at tasks than humans, but an AI-human ecology in which both become more capable together. This is a fundamentally different optimization target than benchmark performance.</p>
   </div>
 
@@ -679,7 +763,7 @@ body { font-size: 16px; }
     <div class="section-rule"></div>
   </div>
 
-  <h2>Who Wins, Who Loses, and How the Winners Act</h2>
+  <h2 id="section-xiii">Who Wins, Who Loses, and How the Winners Act<a class="section-anchor" href="#section-xiii" aria-label="Link to section">¶</a></h2>
 
   <p>The distribution of benefit from AI is not opaque. It follows a pattern visible in every prior technology transition, and the names of the winners are already known.</p>
 
@@ -689,9 +773,9 @@ body { font-size: 16px; }
 
   <p>The <strong>capital layer</strong> sits above both. SoftBank, Microsoft, Google, Andreessen Horowitz, Tiger Global, and a small number of sovereign wealth funds have placed bets across the entire AI stack simultaneously — infrastructure, models, applications, and the data pipelines feeding all three. Sam Altman, CEO of OpenAI, has publicly sought to raise <strong>$7 trillion</strong> for AI infrastructure — a figure exceeding the GDP of Japan — while OpenAI transitions from the nonprofit structure that justified its founding into a fully for-profit corporation. The philanthropic frame that created public goodwill and regulatory deference is being dissolved precisely as the commercial opportunity it deferred to has clarified.</p>
 
-  <p>The <strong>regulatory layer</strong> is being shaped in real time, and the incumbents are shaping it. OpenAI, Anthropic, and Google have all participated extensively in AI safety and governance discussions in Washington, Brussels, and London. The regulations that emerge tend to impose compliance costs — auditing requirements, safety evaluations, documentation standards — that well-resourced incumbents can absorb and that smaller competitors, open-source projects, and non-Western labs cannot. This is <strong>regulatory capture</strong> disguised as responsibility. The safety frame is not false — frontier AI does carry real risks — but the regulatory framework built around that frame consistently advantages the labs that wrote it.</p>
+  <p>The <strong>regulatory layer</strong> is being shaped in real time, and the incumbents are shaping it. OpenAI, Anthropic, and Google have all participated extensively in AI safety and governance discussions in Washington, Brussels, and London. The regulations that emerge tend to impose compliance costs — auditing requirements, safety evaluations, documentation standards — that well-resourced incumbents can absorb and that smaller competitors, open-source projects, and non-Western labs cannot. This is <strong><span class="term" data-tooltip="When the industry being regulated shapes the regulations written to govern it — turning compliance costs into a competitive moat that protects incumbents." tabindex="0">regulatory capture</span></strong> disguised as responsibility. The safety frame is not false — frontier AI does carry real risks — but the regulatory framework built around that frame consistently advantages the labs that wrote it.</p>
 
-  <p>The losers are more numerous and less organized. Shoshana Zuboff’s research on <strong>surveillance capitalism</strong> named the dynamic a decade before it reached its current scale: the raw material of human experience — attention, behavior, expression, relationship — is extracted at no cost, rendered into data, and sold as predictions about future behavior.<sup><a href="#ref-23" class="citation">[23]</a></sup> With generative AI, the extraction deepens. The raw material now includes the full output of human creative and cognitive labor: every book, article, image, piece of code, and conversation that could be scraped. The people who produced that output receive nothing. The models trained on it generate billions in revenue. Kate Crawford’s <em>Atlas of AI</em> documents the material and human costs invisible in this equation — the cobalt mines, the content moderators, the annotators paid pennies per label to make the models safe enough to deploy.<sup><a href="#ref-24" class="citation">[24]</a></sup></p>
+  <p>The losers are more numerous and less organized. Shoshana Zuboff’s research on <strong><span class="term" data-tooltip="The extraction of human behavioral data at no cost, rendered into predictions about future behavior and sold for profit. Term coined by Shoshana Zuboff." tabindex="0">surveillance capitalism</span></strong> named the dynamic a decade before it reached its current scale: the raw material of human experience — attention, behavior, expression, relationship — is extracted at no cost, rendered into data, and sold as predictions about future behavior.<sup><a href="#ref-23" class="citation">[23]</a></sup> With generative AI, the extraction deepens. The raw material now includes the full output of human creative and cognitive labor: every book, article, image, piece of code, and conversation that could be scraped. The people who produced that output receive nothing. The models trained on it generate billions in revenue. Kate Crawford’s <em>Atlas of AI</em> documents the material and human costs invisible in this equation — the cobalt mines, the content moderators, the annotators paid pennies per label to make the models safe enough to deploy.<sup><a href="#ref-24" class="citation">[24]</a></sup></p>
 
   <p>Virginia Eubanks, in <em>Automating Inequality</em>, traced what happens when AI systems meet the people who had the least power before they arrived: the welfare applicant whose benefits are cut by an algorithm that processes her file without ever meeting her; the unhoused person whose housing priority is scored by a system trained on data that encodes the biases of the system that failed her.<sup><a href="#ref-25" class="citation">[25]</a></sup> Ruha Benjamin, in <em>Race After Technology</em>, named the same dynamic in policing, healthcare, and hiring: algorithms do not eliminate discrimination; they <strong>launder it</strong> — convert human bias into mathematical output that carries the authority of objectivity while remaining perfectly legible to the structures of power that produced the bias in the first place.<sup><a href="#ref-26" class="citation">[26]</a></sup></p>
 
@@ -706,7 +790,7 @@ body { font-size: 16px; }
     <div class="section-rule"></div>
   </div>
 
-  <h2>The Way Out: From Solidarity to Community Ownership</h2>
+  <h2 id="section-xiv">The Way Out: From Solidarity to Community Ownership<a class="section-anchor" href="#section-xiv" aria-label="Link to section">¶</a></h2>
 
   <p>None of this is inevitable. But the alternatives require deliberate construction, not spontaneous emergence. Here are paths that exist — not as proposals but as operating realities.</p>
 
@@ -751,7 +835,7 @@ body { font-size: 16px; }
     <div class="section-rule"></div>
   </div>
 
-  <h2>The Next Chapter of the Play</h2>
+  <h2 id="section-xv">The Next Chapter of the Play<a class="section-anchor" href="#section-xv" aria-label="Link to section">¶</a></h2>
 
   <p>In Greek tragedy, the chorus exists to speak what the actors cannot see. Each actor performs their role correctly. The catastrophe does not arrive because anyone makes an obvious mistake. It arrives because the structure was written so that every individually rational action combines into collective disaster. Oedipus does nothing wrong by any local measure. The tragedy is in the shape of the whole.</p>
 
@@ -788,7 +872,7 @@ body { font-size: 16px; }
     <div class="section-rule"></div>
   </div>
 
-  <h2>What Kind of World Are We Cultivating?</h2>
+  <h2 id="section-xvi">What Kind of World Are We Cultivating?<a class="section-anchor" href="#section-xvi" aria-label="Link to section">¶</a></h2>
 
   <p>Every technology embeds a vision of the future in its design choices. The interaction model embeds a vision in which humans and AI are genuinely collaborative partners — in which the AI adapts to human rhythm, human context, human need, rather than requiring humans to flatten themselves into prompts and wait. That is a better vision than most of what the industry is currently building toward. And the problem Thinking Machines solved — the turn-based bottleneck — is a real one. Continuous, low-latency, multimodal AI opens domains that were previously architecturally closed: real-time medical decision support, genuine tutoring presence, collaborative creative work that doesn’t interrupt its own flow. These are not trivial.</p>
 
@@ -852,6 +936,31 @@ body { font-size: 16px; }
     </p>
   </div>
 </div>
+
+
+<script>
+(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var terms = document.querySelectorAll('.term');
+    var isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+    if (isTouchDevice) {
+      terms.forEach(function(term) {
+        term.addEventListener('touchend', function(e) {
+          e.preventDefault();
+          var wasActive = this.classList.contains('tooltip-active');
+          terms.forEach(function(t) { t.classList.remove('tooltip-active'); });
+          if (!wasActive) { this.classList.add('tooltip-active'); }
+        });
+      });
+      document.addEventListener('touchstart', function(e) {
+        if (!e.target.closest('.term')) {
+          terms.forEach(function(t) { t.classList.remove('tooltip-active'); });
+        }
+      });
+    }
+  });
+})();
+</script>
 
 </body>
 </html>
